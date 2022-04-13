@@ -1,11 +1,12 @@
 import React from 'react';
 import Experts from '../Exparts/Exparts';
-import Service from '../Service/Service';
 import Services from '../Services/Services';
+import SlideShow from '../SlideShow/SlideShow';
 
 const Home = () => {
     return (
         <div>
+            <SlideShow></SlideShow>
             <Services></Services>
             <Experts></Experts>
         </div>
