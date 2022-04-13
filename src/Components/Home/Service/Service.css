@@ -3,3 +3,10 @@
     border-radius:10px;
     padding:10px;
 }
+.service-container button{
+    border:none;
+    padding:10px;
+    border-radius: 10px;
+    display:flex;
+    justify-content:center;
+}
