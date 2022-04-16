@@ -2,11 +2,14 @@
     margin:0 auto;
     width: 50%;
 }
-.register input{
+.register input:not([type='checkbox']){
    display: block;
    width: 100%;
    padding:10px; 
    margin-bottom: 10px;
+   border:1px solid lightgrey;
+   border-radius:5px;
+   outline:none
 }
 .register-btn{
     border:none;
