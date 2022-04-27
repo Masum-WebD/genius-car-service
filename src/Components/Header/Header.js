@@ -13,8 +13,8 @@ const Header = () => {
     signOut(auth)
   }
   return (
-    <>
-      <Navbar  collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+    
+      <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark" >
         <Container>
           <Navbar.Brand as={Link} to="/">
               <img height={30} src={logo} alt="" />
@@ -39,7 +39,18 @@ const Header = () => {
               </NavDropdown>
             </Nav>
             <Nav>
+
+
+              {
+                user && <>
+                <Nav.Link as={Link} to="/manage">Mange Service</Nav.Link>
+                <Nav.Link as={Link} to="addService">Add Service</Nav.Link>
+
+                </>
+              }
               <Nav.Link as={Link} to="about">About</Nav.Link>
+
+
               {
                 user?
                 <button className='btn btn-link text-decoration-none text-light' onClick={handleSignOut}>Sign Out</button>
@@ -51,7 +62,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+
   );
 };
 

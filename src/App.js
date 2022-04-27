@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes} from 'react-router-dom';
 import './App.css';
 import About from './Components/About/About';
+import AddService from './Components/AddService/AddService';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home/Home';
@@ -9,6 +10,7 @@ import Login from './Components/Login/Login/Login';
 import Register from './Components/Login/Register/Register';
 import CheckOut from './Components/Login/RequireAuth/CheckOut';
 import RequireAuth from './Components/Login/RequireAuth/RequireAuth';
+import ManageService from './Components/ManageService/ManageService';
 import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 
 
@@ -25,6 +27,16 @@ function App() {
         <Route path='checkOut' element={
           <RequireAuth>
             <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addService' element={
+          <RequireAuth>
+            <AddService></AddService>
+          </RequireAuth>
+        }></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageService></ManageService>
           </RequireAuth>
         }></Route>
         <Route path='register' element={<Register></Register>}></Route>

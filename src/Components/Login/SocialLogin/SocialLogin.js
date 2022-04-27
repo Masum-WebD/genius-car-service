@@ -16,7 +16,7 @@ const SocialLogin = () => {
     if (error || error1) {
         errorMessage=
           <div>
-            <p style={{color: 'red'}}>Error: {error?.message} {error?.message}</p>
+            <p style={{color: 'red'}}>Error: {error?.message} {error1?.message}</p>
           </div>
        
       }
